@@ -82,12 +82,12 @@ def tictac_o():
             
 #Chose player for start
 def tictactoe():
-    eingabe = input("Who starts? Chose Player 'X' or Player 'O': ")
+    eingabe = input("Choose Player [X/O]: ")
     if eingabe == "X" or eingabe == "x":
         print(" ")
         board()
         return tictac_x()
-    if eingabe == "O" or eingabe == "o":
+    if eingabe == "O" or eingabe == "o" or eingabe == "0":
         print(" ")
         board()
         return tictac_o()
