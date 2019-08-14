@@ -86,11 +86,11 @@ def tictactoe():
     if eingabe == "X" or eingabe == "x":
         print(" ")
         board()
-        tictac_x()
+        return tictac_x()
     if eingabe == "O" or eingabe == "o":
         print(" ")
         board()
-        tictac_o()
+        return tictac_o()
     else:
         print("Input not valid. Try again")
         return tictactoe()
