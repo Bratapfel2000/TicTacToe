@@ -67,8 +67,6 @@ def move(player, eingabe_int):
         otherplayer(player)    
     else:
         field[eingabe_int-1] = player
-
-
         if win() == True:
             print(" ")
             board()
