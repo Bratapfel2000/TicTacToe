@@ -1,7 +1,7 @@
 """
 py 3.7
 
-TicTacToe 1.0
+TicTacToe 1.035
 
 """
 
@@ -48,7 +48,6 @@ def full():
         (field[8] == "X" or  field[8] == "O")):
         print(" ")
         board()
-        print("-----------No Winner! Game Over!--------------")
         return True
     else:
         return False
@@ -72,7 +71,7 @@ def move(player, eingabe_int):
             board()
             print("Player '" + player + "' wins!")
         elif full() == True:
-            return tictac_retry()
+            return game_over()
         else:
             print(" ")
             board()
@@ -110,5 +109,12 @@ def tictac_retry():
     else:
         print("Input not valid. Try again.")
         return tictac_retry()
-    
+
+def game_over():
+    print(" ")
+    print("      -----------------------------------------------------      ")
+    print("-----------No Winner! Both Players lose! Game Over!--------------")
+    print("      -----------------------------------------------------      ")
+    print(" ")
+        
 tictactoe()
