@@ -22,9 +22,13 @@ for i in range(9):
     
 #create board with the 9 fields
 def board():
-    print(field[0],field[1],field[2])
-    print(field[3],field[4],field[5])
-    print(field[6],field[7],field[8])
+    print(" ----------- ")
+    print("|", field[0],"|", field[1],"|", field[2],"|" )
+    print(" ----------- ")
+    print("|", field[3],"|", field[4],"|", field[5],"|")
+    print(" ----------- ")
+    print("|", field[6],"|", field[7],"|", field[8],"|")
+    print(" ----------- ")
 
 #define win situation
 def win():
