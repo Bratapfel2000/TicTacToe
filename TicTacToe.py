@@ -7,7 +7,7 @@ TicTacToe 1.035
 
 #chose number from 1-9, if anything else entered, try again
 def possible_numbers():
-    eingabe = input("Enter number of field: ")
+    eingabe = input("Enter field: ")
     ok_numbers = ['1','2','3','4','5','6','7','8', '9']
     if eingabe in ok_numbers:
         return eingabe
