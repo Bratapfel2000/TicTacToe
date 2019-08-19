@@ -1,8 +1,6 @@
 """
 py 3.7
-
-TicTacToe 1.035
-
+TicTacToe 1.039
 """
 
 #chose number from 1-9, if anything else entered, try again
@@ -19,6 +17,12 @@ def possible_numbers():
 field = []
 for i in range(9):
     field.append(str(i+1))
+
+def fields():
+    global field
+    field = []
+    for i in range(9):
+        field.append(str(i+1))
     
 #create board with the 9 fields
 def board():
@@ -29,15 +33,16 @@ def board():
     print(" ----------- ")
     print("|", field[6],"|", field[7],"|", field[8],"|")
     print(" ----------- ")
-
+    
 #define win situation
 def win():
-    if field[0]==field[1]==field[2] or field[3]==field[4]==field[5] or field[6]==field[7]==field[8]:
-        return True
-    if field[0]==field[3]==field[6] or field[1]==field[4]==field[7] or field[2]==field[5]==field[8]:
-        return True
-    if field[0]==field[4]==field[8] or field[2]==field[4]==field[6]:
-        return True
+    for i in range(3):
+        if field[3*i]==field[3*i+1]==field[3*i+2]:
+            return True
+        if field[i]==field[i+3]==field[i+6]:
+            return True
+        if field[0]==field[4]==field[8] or field[2]==field[4]==field[6]:
+            return True        
 
 #define when board is full without winner
 def full():
@@ -74,6 +79,8 @@ def move(player, eingabe_int):
             print(" ")
             board()
             print("Player '" + player + "' wins!")
+            print(" ")
+            return tictac_retry()
         elif full() == True:
             return game_over()
         else:
@@ -107,6 +114,7 @@ def tictactoe():
 def tictac_retry():
     eingabe = input("Play again? [Y/N]: ")
     if eingabe == "Y" or eingabe == "y":
+        field = fields()
         return tictactoe()
     if eingabe == "N" or eingabe == "n":
         print("----- Bye ;) -----")
@@ -116,9 +124,8 @@ def tictac_retry():
 
 def game_over():
     print(" ")
-    print("      -----------------------------------------------------      ")
-    print("-----------No Winner! Both Players lose! Game Over!--------------")
-    print("      -----------------------------------------------------      ")
+    print(10*"-"+"Game Over! No Winner!"+10*"-")
     print(" ")
+    return tictac_retry()
         
 tictactoe()
