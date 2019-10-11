@@ -1,5 +1,5 @@
 """
-TicTacToe 1.0
+TicTacToe2000 1.0
 py 3.7
 """
 
