@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class TicTacJoe_0012_beta {
+public class TicTacJoe_0012_beta_2 {
 
   //creates fields from 0-x with numbers 1-x
      public static int [] createFields(int x) {
@@ -122,18 +122,7 @@ public class TicTacJoe_0012_beta {
                else{
                   return makeStringMove_x(j);}
       }     
-    }     
-               
-  // creates  board
-     public static void printFields() {
-       int[] field = createFields(9);
-       System.out.printf("%d  %d  %d \n",
-                          field[0], field[1], field[2]);
-      System.out.printf("%d  %d  %d \n",
-                          field[3], field[4], field[5]);      
-      System.out.printf("%d  %d  %d \n",
-                          field[6], field[7], field[8]);
-      }         
+    }              
          
     //print fields 
      public static void printStringFields(String [] j) {
