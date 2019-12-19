@@ -1,8 +1,8 @@
 """
 TycTacToe2000 - II
-Pre-Alpha
 for use in cmd
-version 0.013g01_clr01
+Pre-Alpha
+version 0.014
 written with py 3.7.4
 """
 
@@ -11,7 +11,6 @@ t: total matrix = dictionary. 1: [column, row, fieldnumber, occupied(1/0)]
 f: numbers of fields of board (=m*n)
 x: row of matrix
 y: columns of matrix
-
 
 x_3: marked rows
 y_3: marked columns
