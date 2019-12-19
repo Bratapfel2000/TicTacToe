@@ -25,17 +25,6 @@ from colorama import *
 init()
 ##print(Fore.BLUE + "Hallo")
 
-
-def explantation():
-    print(" <---- m ---->")
-    print("^")
-    print("|")
-    print("|")
-    print("n")
-    print("|")
-    print("|")
-    print("v")
-
 #set matrix size
 #m,n global so other functions can use it(printmatrix)
 #create matrix, then print it. Return m and n
@@ -43,8 +32,8 @@ def set_matrix_size():
     global m
     global n
     global win_strike
-    n = int(input("Set number height: "))
-    m = int(input("Set number width: "))
+    n = int(input("Set height: "))
+    m = int(input("Set width: "))
     win_strike = winning_strike_length()
     matrix_nm(m,n)
     print("")
